@@ -40,15 +40,13 @@
                 bckOld = ShiftFibo(inputVal, count, false);
                 document.getElementById("forward").textContent = fwdOld;
                 document.getElementById("backward").textContent = bckOld;
-                oldArgBck = oldArgBck + bckOld;
+                oldArgBck = oldArgBck + " " + bckOld;
                 oldArgFwd = oldArgFwd + " " + fwdOld;
             }
             
             document.getElementById("input").value = "";
-            document.getElementById("heading").style.display = "block";
-            document.getElementById("oldheading").style.display = "block";
-            document.getElementById("oldforward").textContent = oldArgBck;
-            document.getElementById("oldbackward").textContent = oldArgFwd;
+            document.getElementById("oldforward").textContent = oldArgFwd;
+            document.getElementById("oldbackward").textContent = oldArgBck;
         }
 
         function fibi(n) {
