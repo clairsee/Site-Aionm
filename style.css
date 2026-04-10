@@ -1,0 +1,108 @@
+/* Importando a fonte Roboto conforme seu HTML */
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+body {
+    background-color: #0d0a16;
+    color: #e2e2e2;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header h1 {
+    color: #9d6aff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    text-shadow: 0 4px 10px rgba(157, 106, 255, 0.3);
+}
+
+/* Container de entrada */
+main {
+    background: #1a1429;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+#input {
+    flex: 1;
+    background: #251c3a;
+    border: 2px solid #3d2b5e;
+    padding: 12px 15px;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+#input:focus {
+    outline: none;
+    border-color: #9d6aff;
+    box-shadow: 0 0 8px rgba(157, 106, 255, 0.2);
+}
+
+input[type="submit"] {
+    background: #6200ee;
+    color: white;
+    border: none;
+    padding: 0 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+input[type="submit"]:hover {
+    background: #7c3aed;
+}
+
+/* Seção de Resultados */
+section {
+    width: 100%;
+    max-width: 660px;
+}
+
+#heading, #oldheading {
+    color: #bc95ff;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #3d2b5e;
+    padding-bottom: 10px;
+    margin-top: 20px;
+}
+
+/* Estilo para as etiquetas de "Para Frente/Trás" */
+section p:nth-of-type(odd) {
+    color: #9d6aff;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+/* Estilo para os campos de texto resultantes */
+#forward, #backward, #oldforward, #oldbackward {
+    background: #1a1429;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    min-height: 24px;
+    word-break: break-all; /* Para textos longos não quebrarem o layout */
+    border-left: 4px solid #6200ee;
+}
+
+/* Estilo específico para o histórico */
+#oldforward, #oldbackward {
+    border-left-color: #3d2b5e;
+    background: #140f21;
+    color: #aaa;
+    font-style: italic;
+}
