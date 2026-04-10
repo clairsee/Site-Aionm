@@ -1,101 +1,108 @@
+/* Importando a fonte Roboto conforme seu HTML */
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #0f0a1a;
-    /* Roxo quase preto */
-    color: #e0d7f2;
+    background-color: #0d0a16;
+    color: #e2e2e2;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh;
 }
 
-/* Cabeçalho */
 header h1 {
-    color: #bc95ff;
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    text-shadow: 0 0 15px rgba(188, 149, 255, 0.4);
+    color: #9d6aff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    text-shadow: 0 4px 10px rgba(157, 106, 255, 0.3);
 }
 
-/* Área de Input */
+/* Container de entrada */
 main {
-    width: 100%;
-    max-width: 600px;
+    background: #1a1429;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     display: flex;
     gap: 10px;
-    margin-bottom: 40px;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 30px;
 }
 
 #input {
     flex: 1;
-    padding: 15px;
-    border-radius: 12px;
+    background: #251c3a;
     border: 2px solid #3d2b5e;
-    background: #1c142e;
-    color: white;
-    font-size: 1rem;
-    outline: none;
-    transition: border-color 0.3s, box-shadow 0.3s;
+    padding: 12px 15px;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 16px;
+    transition: all 0.3s;
 }
 
 #input:focus {
-    border-color: #8a4fff;
-    box-shadow: 0 0 10px rgba(138, 79, 255, 0.3);
+    outline: none;
+    border-color: #9d6aff;
+    box-shadow: 0 0 8px rgba(157, 106, 255, 0.2);
 }
 
 input[type="submit"] {
-    padding: 0 25px;
-    border-radius: 12px;
-    border: none;
-    background: linear-gradient(135deg, #8a4fff, #5e2ca5);
+    background: #6200ee;
     color: white;
+    border: none;
+    padding: 0 25px;
+    border-radius: 8px;
     font-weight: bold;
     cursor: pointer;
-    transition: transform 0.2s, hover 0.2s;
+    transition: background 0.3s;
 }
 
 input[type="submit"]:hover {
-    transform: translateY(-2px);
-    filter: brightness(1.1);
+    background: #7c3aed;
 }
 
 /* Seção de Resultados */
 section {
     width: 100%;
-    max-width: 600px;
-    background: rgba(45, 30, 75, 0.4);
-    backdrop-filter: blur(10px);
-    padding: 25px;
-    border-radius: 20px;
-    border: 1px solid rgba(138, 79, 255, 0.2);
+    max-width: 660px;
 }
 
-h2, h3 {
+#heading, #oldheading {
     color: #bc95ff;
-    margin-top: 0;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #3d2b5e;
+    padding-bottom: 10px;
+    margin-top: 20px;
 }
 
-h3 {
-    margin-top: 30px;
-    font-size: 1.1rem;
-    opacity: 0.8;
-    border-top: 1px solid rgba(138, 79, 255, 0.1);
-    padding-top: 20px;
+/* Estilo para as etiquetas de "Para Frente/Trás" */
+section p:nth-of-type(odd) {
+    color: #9d6aff;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
 }
 
-/* Estilo para os textos de saída */
-p {
-    background: rgba(15, 10, 26, 0.5);
+/* Estilo para os campos de texto resultantes */
+#forward, #backward, #oldforward, #oldbackward {
+    background: #1a1429;
     padding: 15px;
     border-radius: 8px;
-    min-height: 1.2rem;
-    word-wrap: break-word;
-    border-left: 4px solid #8a4fff;
+    margin-top: 0;
+    margin-bottom: 20px;
+    min-height: 24px;
+    word-break: break-all; /* Para textos longos não quebrarem o layout */
+    border-left: 4px solid #6200ee;
 }
 
+/* Estilo específico para o histórico */
 #oldforward, #oldbackward {
-    font-size: 0.9rem;
-    opacity: 0.7;
-    border-left: 4px solid #3d2b5e;
+    border-left-color: #3d2b5e;
+    background: #140f21;
+    color: #aaa;
+    font-style: italic;
 }
