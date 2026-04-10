@@ -1,4 +1,3 @@
-/* Importando a fonte Roboto conforme seu HTML */
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
 
 body {
@@ -20,7 +19,6 @@ header h1 {
     text-shadow: 0 4px 10px rgba(157, 106, 255, 0.3);
 }
 
-/* Container de entrada */
 main {
     background: #1a1429;
     padding: 30px;
@@ -65,7 +63,6 @@ input[type="submit"]:hover {
     background: #7c3aed;
 }
 
-/* Seção de Resultados */
 section {
     width: 100%;
     max-width: 660px;
@@ -79,7 +76,6 @@ section {
     margin-top: 20px;
 }
 
-/* Estilo para as etiquetas de "Para Frente/Trás" */
 section p:nth-of-type(odd) {
     color: #9d6aff;
     font-weight: bold;
@@ -87,7 +83,6 @@ section p:nth-of-type(odd) {
     font-size: 0.9rem;
 }
 
-/* Estilo para os campos de texto resultantes */
 #forward, #backward, #oldforward, #oldbackward {
     background: #1a1429;
     padding: 15px;
@@ -95,11 +90,10 @@ section p:nth-of-type(odd) {
     margin-top: 0;
     margin-bottom: 20px;
     min-height: 24px;
-    word-break: break-all; /* Para textos longos não quebrarem o layout */
+    word-break: break-all; 
     border-left: 4px solid #6200ee;
 }
 
-/* Estilo específico para o histórico */
 #oldforward, #oldbackward {
     border-left-color: #3d2b5e;
     background: #140f21;
